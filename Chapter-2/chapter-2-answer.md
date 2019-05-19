@@ -238,3 +238,28 @@ k int常量的引用
 p int常量的指针(auto后面的*可以不加)  
 j2 int常量  
 k2 int常量的引用  
+
+* **练习2.36**  
+a int变量 4  
+b int变量 4  
+c int变量 4  
+d int引用 4  
+
+* **练习2.37**  
+a int变量 3  
+b int变量 4  
+c int变量 3  
+d int引用 3  
+
+* **练习2.38**  
+auto是根据初始化的类型来判断，decltype是根据一个额外的表达式来判断类型。  
+```
+类型一样的情况：
+int i = 0;
+auto a = i;
+decltype(i) b; 
+类型不一样的情况：
+int i = 0，&j = i;
+auto a = j;
+decltype(j) b = i; 
+```
