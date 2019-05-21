@@ -8,3 +8,4 @@ C++ Primer 第五版中文版 练习题答案代码（个人所做）
 
 * [第一章 练习题答案](Chapter-1/chapter-1-answer.md)  
 * [第二章 练习题答案](Chapter-2/chapter-2-answer.md)  
+* [第三章 练习题答案](Chapter-3/chapter-3-answer.md)  
