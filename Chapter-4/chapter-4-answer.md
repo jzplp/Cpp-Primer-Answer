@@ -191,3 +191,30 @@ string p1 = s + (s[s.size() - 1] == 's' ? "" : "s");
 * **练习4.33**  
 先计算someValue的值，为真则执行++x,++y,然后把递增后的y作为表达式结果。
 如果someValue的值为假，则--x，--y，然后把递减的y作为表达式结果。
+
+* **练习4.34**  
+(a) float转换为bool  
+(b) int转换为float，再转换为double  
+(c) char转换为int，再转换为double  
+
+* **练习4.35**  
+(a) char转换为int，再转换为char  
+(b) int转换为double，unsigned int转换为double，再转换为float  
+(c) unsigned int转换为float，再转换为double  
+(d) int转换为float，再转换为double，再转换为char  
+
+* **练习4.36**  
+```
+i *= static_cast<int>(d); 
+```
+
+* **练习4.37**  
+```
+(a) pv = static_cast<void *>((const_cast<string *>(ps)));
+(b) i = static_cast<int>(*pc);
+(c) pv = static_cast<void *>(&d);
+(d) pc = static_cast<char *>(pv);
+```
+
+* **练习4.38**  
+首先计算j/i的值，再强制转换为double类型，为slope初始化。
