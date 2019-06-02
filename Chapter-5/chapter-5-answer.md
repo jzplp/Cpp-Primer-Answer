@@ -136,3 +136,64 @@ switch()
 
 * **练习5.14**  
 [5.14程序代码](5.14.cpp)  
+
+* **练习5.15**  
+```
+(a)
+int ix;
+for (ix = 0;ix != sz; ++ix) {...}
+if (ix != sz)
+
+(b)
+int ix;
+for ( ; ix != sz; ++ix) {...}
+
+(c)
+for(int ix = 0; ix != sz; ++ix) {...}
+```
+
+* **练习5.16**  
+[5.16while循环程序代码](5.16/5.16_while.cpp)  
+[5.16for循环程序代码](5.16/5.16_for.cpp)  
+
+* **练习5.17**  
+[5.17程序代码](5.17.cpp)  
+
+* **练习5.18**  
+```
+(a)
+do
+{
+    int v1, v2;
+    cout << "...";
+    if (cin >> v1 >> v2)
+        cout << "Sum is " << v1 + v2 <<endl;
+}while (cin);
+
+(b)
+int ival;
+do { ... } while (ival = get_response());
+
+(c)
+int ival;
+do { 
+    ival = get_response();
+} while (ival);
+
+```
+
+* **练习5.19**  
+[5.19程序代码](5.19.cpp)  
+
+* **练习5.20**  
+[5.20程序代码](5.19.cpp)  
+
+* **练习5.21**  
+[重写5.20程序代码](5.21_5.20_upper.cpp)  
+
+* **练习5.22**  
+```
+int sz = get_size();
+while(sz <= 0)
+    sz = get_size();
+```
