@@ -186,7 +186,7 @@ do {
 [5.19程序代码](5.19.cpp)  
 
 * **练习5.20**  
-[5.20程序代码](5.19.cpp)  
+[5.20程序代码](5.20.cpp)  
 
 * **练习5.21**  
 [重写5.20程序代码](5.21_5.20_upper.cpp)  
@@ -197,3 +197,17 @@ int sz = get_size();
 while(sz <= 0)
     sz = get_size();
 ```
+
+* **练习5.23**  
+[5.23程序代码](5.23.cpp)  
+
+* **练习5.24**  
+[5.24程序代码](5.24.cpp)  
+程序输出下面内容并终止：
+```
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  i2 is zero!
+```
+
+* **练习5.25**  
+[5.25程序代码](5.25.cpp)  
