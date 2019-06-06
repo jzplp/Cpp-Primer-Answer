@@ -120,4 +120,55 @@ int类型
 可以是引用，如果是引用必须是const引用。也可以是非引用类型。
 
 * **练习6.30**  
+[6.30错误程序代码](6.30.cpp)  
+编译器错误信息：
+```
+[Error] return-statement with no value, in function returning 'bool' [-fpermissive]
+```
+
+* **练习6.31**  
+如果引用的是函数中定义的局部变量则返回引用无效。  
+
+* **练习6.32**  
+合法。对数组ia的每个元素赋给下标值。
+
+* **练习6.33**  
+[6.33程序代码](6.33.cpp)  
+
+* **练习6.34**  
+如果传入的是小于1的数则函数会无限递归。
+
+* **练习6.35**  
+因为后面还使用到了val的值，容易产生未定义的值。
+
+* **练习6.36**  
+```
+std::string (&func(string s))[10];
+```
+
+* **练习6.37**  
+```
+(1)
+typedef std::string arr[10];
+arr &func(std::string s);
+(2)
+using arr = std::string [10];
+arr &func(std::string s);
+(3)
+auto func(std::string s) -> std::string (&)[10];
+(4)
+std::string arr[10];
+decltype(arr) &func(std::string s);
+```
+都挺好用的。
+
+* **练习6.38**  
+```
+decltype(odd) &arrPtr(int i)
+{
+    return (i % 2) ? odd : even;
+}
+```
+
+* **练习6.39**  
 
