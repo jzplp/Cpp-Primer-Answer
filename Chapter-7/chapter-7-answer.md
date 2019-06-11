@@ -119,4 +119,54 @@ set将只修改临时对象。第一行输出正确的更改后的临时对象�
 [7.31程序代码](7.31.cpp)  
 
 * **练习7.32**  
+[7.32 Screen.h程序代码](7.32/Screen.h)  
+[7.32 类检验程序代码](7.32/main.cpp)  
+
+* **练习7.33**  
+出现编译错误。   
+正确的程序代码：  
+[7.33 Screen.h程序代码](7.33/Screen.h)  
+[7.33 类检验程序代码](7.33/main.cpp)  
+
+* **练习7.34**  
+会出现编译错误，成员找不到pos类型
+
+* **练习7.35**  
+类型定义分别是：
+```
+typedef string Type;
+Type initVal(); //string
+class Exercise {
+public:
+    typedef double Type;
+    Type setVal (Type); //double
+    Type initVal (); //double
+private:
+    int val;
+};
+Type Exercise::setVal(Type parm) { //string double
+    val += parm + initVal();
+    return val;
+}
+```
+
+修改后：（我觉得val也应该用double,但是下面并未修改）
+```
+typedef string Type;
+Type initVal(); //string
+class Exercise {
+public:
+    typedef double Type;
+    Type setVal (Type); //double
+    Type initVal (); //double
+private:
+    int val;
+};
+Exercise::Type Exercise::setVal(Type parm) { //string double
+    val += parm + initVal();
+    return val;
+}
+```
+
+* **练习7.36**  
 
