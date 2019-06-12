@@ -169,4 +169,79 @@ Exercise::Type Exercise::setVal(Type parm) { //string double
 ```
 
 * **练习7.36**  
+```
+struct X {
+    X (int i, int j) : base(i), rem(i % j) { }
+    int rem, base;
+};
+
+```
+
+* **练习7.37**  
+```
+next:
+Sales_data(std::string s = "") : bookNp(s) { }
+0 , 0 , ""
+last:
+Sales_data(std::string s = "") : bookNp(s) { }
+0 , 0 , "9-999-99999-9"
+```
+
+* **练习7.38**  
+```
+funConstruct(std::istream &in = std::cin);
+```
+
+* **练习7.39**  
+不合法。会造成程序不能正确匹配到重载函数。
+
+* **练习7.40**  
+```
+class Tree
+{
+public:
+    Tree() = default;
+    Tree(int d) : data(d) { }
+    Tree(int d, Tree * l, Tree * r) : data(d), left(l), right(r) { }
+private:
+    int data = 0;
+    Tree * left = nullptr;
+    Tree * right = nullptr;
+};
+```
+
+* **练习7.41**  
+带输出的测试委托构造函数  
+[7.41 Sales_data.h程序代码](7.41/Sales_data.h)  
+[7.41 Sales_data.cpp程序代码](7.41/Sales_data.cpp)  
+[7.41 测试程序代码](7.41/main.cpp)  
+
+* **练习7.42**  
+[7.42 Tree.h程序代码](7.42/Tree.h)  
+[7.42 测试程序代码](7.42/main.cpp)  
+
+* **练习7.43**  
+```
+class C
+{
+public:
+    C () : no(0) { }
+private:
+    NoDefault no(0);
+};
+```
+
+* **练习7.44**  
+不合法，因为NoDefault类没有默认构造函数，vec无法对它进行值初始化
+
+* **练习7.45**  
+合法，因为C有默认构造函数，而且C的默认构造函数可以正常初始化NoDefault类
+
+* **练习7.46**  
+(a) 即使不提供，系统也会自动帮你生成一个（如果可以生成的话）  
+(b) 正确  
+(c) 不正确，如果不提供默认构造函数，那么就无法进行默认初始化和值初始化  
+(d) 不正确，如果是内置类型的数据成员，那么进行默认初始化，其值是未定义的  
+
+* **练习7.47**  
 
