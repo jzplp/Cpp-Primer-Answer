@@ -244,4 +244,46 @@ private:
 (d) 不正确，如果是内置类型的数据成员，那么进行默认初始化，其值是未定义的  
 
 * **练习7.47**  
+目前来看，可以是explicit的，也可以不是。因为即使允许隐式转换，由于units_sold和revenue都被初始化为0，因此不会影响正常计算。
+
+* **练习7.48**  
+```
+不是explicit:
+string null_isbn("9-999-99999-9")；
+接受一个const char *作为参数，创建一个string变量
+Sales_data item1(null_isbn);
+接受一个string，创建一个Sales_data变量
+Sales_data item2("9-999-99999-9");
+const char * 隐式转换为string，再创建一个Sales_data变量
+
+是explicit:
+操作无影响，与上面相同
+```
+
+* **练习7.49**  
+(a) string隐式转换为临时Sales_data对象，再值传递给函数  
+(b) 非常量引用，无法调用  
+(c) string隐式转换为临时Sales_data对象,再传递常量引用给函数
+
+* **练习7.50**  
+接受std::istream &为参数的构造函数可以是explicit的
+
+* **练习7.51**  
+因为string接受一个const char *作为非explicit的构造函数是有实际含义和需求的，不会造成歧义。
+但是需要一个vector的地方却用一个整数作为实参有时会造成误解。
+
+* **练习7.52**  
+"978-0590353403"被bookNo用来初始化，25被units_sold用来初始化，15.99被revenue用来初始化  
+作为真实的书好像太便宜了？应该是25 * 15.99被revenue用来初始化：  
+Sales_data item = {"978-0590353403", 25, 25 * 15.99};
+
+* **练习7.53**  
+[7.53 Debug.h程序代码](7.53/Debug.h)  
+[7.53 测试程序代码](7.53/main.cpp)  
+
+* **练习7.54**  
+不能，因为函数内存在执行实际操作的非return语句。
+
+* **练习7.55**  
+Data不是字面值常量类，因为数据成员string不是字面值类型。
 
