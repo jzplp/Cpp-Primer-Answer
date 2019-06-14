@@ -287,3 +287,30 @@ Sales_data item = {"978-0590353403", 25, 25 * 15.99};
 * **练习7.55**  
 Data不是字面值常量类，因为数据成员string不是字面值类型。
 
+* **练习7.56**  
+静态成员类似于静态变量，提供了一种类的通用属性。不在类的变量中存储，不随类的变量而改变。
+
+* **练习7.57**  
+[7.57 Account.h程序代码](7.57/Account.h)  
+[7.57 Account.cpp程序代码](7.57/Account.cpp)  
+[7.57 测试程序代码](7.57/Account.cpp)  
+
+* **练习7.58**  
+有错误，带有类内初始值的静态数据成员必须是constexpr的,vector不是字面值常量类，不能使用constexpr，因此必须在类的外部初始化。
+修改：
+```
+class Example
+{
+public:
+    static constexpr double rate = 6.5;
+    static constexpr int vecSize = 20;
+    static std::vector<double> vec;
+};
+
+#include "example.h"
+constexpr double Example::rate;
+constexpr int Example::vecSize;
+std::vector<double> Example::vec(vecSize);
+```
+
+
