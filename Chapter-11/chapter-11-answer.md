@@ -83,4 +83,58 @@ std::multiset<Sales_data, bool (*)(const Sales_data &, const Sales_data &)>::ite
 答案书中的pair迭代器错误。
 
 * **练习11.20**  
+[11.20 insert改写单词计数程序代码](11.20.cpp)  
+
+* **练习11.21**  
+循环输入单词，添加到map中作为关键字，如果是新加入的则设置值为1，以前加入的则设置为当前值+1
+
+* **练习11.22**  
+```
+参数类型：
+{std::string, std::vector<int>}
+返回类型：
+std::pair<std::map<std::string, std::vector<int>>::iterator, bool>
+```
+
+* **练习11.23**  
+[11.23 用multimap重写11.14程序代码](11.23.cpp)  
+
+* **练习11.24**  
+创建一个map，并添加一个{0,1}元素
+
+* **练习11.25**  
+创建一个vector，第二句话错误。
+
+* **练习11.26**  
+用key_type对map进行下标操作。下标运算符返回的类型是mapped_type  
+例子：
+```
+std::map<std::string, zise_t> m;
+m[std::string("str")] = 1;
+```
+
+* **练习11.27**  
+需要查找关键字有几个时用count，仅仅需要知道关键字在不在容器中时用find
+
+* **练习11.28**  
+```
+std::map<std::string, std::vector<int>> m;
+std::map<std::string, std::vector<int>>::iterator = m.find(str);
+```
+
+* **练习11.29**  
+他们全部返回大于该关键字的第一个元素，如果不存在则返回尾迭代器
+
+* **练习11.30**  
+pos.first是一个迭代器，指向当前使用的元素。  
+pos.first->second 取出当前使用的元素的值。
+
+* **练习11.31**  
+[11.31程序代码](11.31.cpp)  
+
+* **练习11.32**  
+11.31答案代码中已经实现了按照字典序打印  
+[11.31程序代码](11.31.cpp)  
+
+* **练习11.33**  
 
