@@ -41,21 +41,57 @@ r2中的内存被智能指针自动释放。
 
 * **练习12.12**  
 (a) 合法  
-(b) 不合法
-(c) 不合法
-(d) 合法但有危险
+(b) 不合法  
+(c) 不合法  
+(d) 合法但有危险  
 
 * **练习12.13**  
 sp指向的内存被释放
 
 * **练习12.14**  
-部分内容只有声明无定义，不能执行
+部分内容只有声明无定义，不能执行  
 [12.14 connection程序代码](12.14.cpp)  
 
 * **练习12.15**  
-部分内容只有声明无定义，不能执行
+部分内容只有声明无定义，不能执行  
 [12.15 用lambda改写connection程序代码](12.15.cpp)  
 
 * **练习12.16**  
+[12.16 错误程序代码](12.16.cpp)  
+错误信息：
+```
+[Error] use of deleted function 'std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = int; _Dp = std::default_delete<int>]'
+```
 
+* **练习12.17**  
+(a) 不合法，ix是int，不是指针  
+(b) 合法，但后续程序错误。局部变量的地址不能传递给智能指针，后面无法销毁  
+(c) 合法  
+(d) 合法，但后续程序错误。局部变量的指针不能传递给智能指针，后面无法销毁  
+(e) 合法  
+(f) 合法,但是造成了两个unique_ptr共享一个指针，后面会造成错误  
+  
+* **练习12.18**  
+因为对shared_ptr销毁或者赋值会自动放弃对指针的控制权  
+
+* **练习12.19**  
+其中添加了自己的compare函数比较StrBlobPtr  
+[12.19 添加了StrBlobPtr的 StrBlob.h程序代码](12.19/StrBlob.h)  
+[12.19 添加了StrBlobPtr的 StrBlob.cpp程序代码](12.19/StrBlob.cpp)  
+[12.19 测试程序代码](12.19/main.cpp)  
+
+* **练习12.20**  
+[12.20 未改动 StrBlob.h程序代码](12.20/StrBlob.h)  
+[12.20 未改动 StrBlob.cpp程序代码](12.20/StrBlob.cpp)  
+[12.20 测试程序代码](12.20/main.cpp)  
+
+* **练习12.21**  
+都可以
+
+* **练习12.22**  
+[12.22 添加了ConstStrBlobPtr的 StrBlob.h程序代码](12.22/StrBlob.h)  
+[12.22 添加了ConstStrBlobPtr的 StrBlob.cpp程序代码](12.22/StrBlob.cpp)  
+[12.22 测试程序代码](12.22/main.cpp)  
+
+* **练习12.23**  
 
