@@ -109,4 +109,20 @@ delete [] pa;
 [12.26程序代码](12.26.cpp)  
 
 * **练习12.27**  
+不参照书，自己编写的  
+[12.27  TextQuery.h程序代码](12.27/TextQuery.h)  
+[12.27 TextQuery.cpp程序代码](12.27/TextQuery.cpp)  
+[12.27 测试程序代码](12.27/main.cpp)  
+
+* **练习12.28**  
+[12.28 不用类实现文本查询 程序代码](12.28.cpp)  
+
+* **练习12.29**  
+不参照书，自己编写的  
+只更改了main中的do while  
+[12.29  TextQuery.h程序代码](12.29/TextQuery.h)  
+[12.29 TextQuery.cpp程序代码](12.29/TextQuery.cpp)  
+[12.29 测试程序代码](12.29/main.cpp)  
+
+* **练习12.30**  
 
