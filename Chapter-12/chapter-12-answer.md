@@ -120,9 +120,34 @@ delete [] pa;
 * **练习12.29**  
 不参照书，自己编写的  
 只更改了main中的do while  
-[12.29  TextQuery.h程序代码](12.29/TextQuery.h)  
+[12.29 TextQuery.h程序代码](12.29/TextQuery.h)  
 [12.29 TextQuery.cpp程序代码](12.29/TextQuery.cpp)  
 [12.29 测试程序代码](12.29/main.cpp)  
 
 * **练习12.30**  
+参照书上的版本  
+[12.30 TextQuery.h程序代码](12.30/TextQuery.h)  
+[12.30 TextQuery.cpp程序代码](12.30/TextQuery.cpp)  
+[12.30 测试程序代码](12.30/main.cpp)  
 
+* **练习12.31**  
+vector也可以保存，但是会出现重复的行号，如果编写代码来去掉会更麻烦。
+
+* **练习12.32**  
+TextQuery参照书上的版本  
+TextQuery中vector替换为了StrBlob，部分函数代码为了配合StrBlob做出了改动  
+给StrBlob中的StrBlobPtr添加了add函数，实现了利用迭代器的随机访问  
+main函数未改动  
+[12.32 StrBlob.h程序代码](12.32/StrBlob.h)  
+[12.32 StrBlob.cpp程序代码](12.32/StrBlob.cpp)  
+[12.32 TextQuery.h程序代码](12.32/TextQuery.h)  
+[12.32 TextQuery.cpp程序代码](12.32/TextQuery.cpp)  
+[12.32 测试程序代码](12.30/main.cpp)  
+
+* **练习12.33**  
+TextQuery参照书上的使用vector的原始版本进行添加的  
+QueryResult类添加了begin, end, get_file函数  
+main.cpp仅用于本题测试  
+[12.33 TextQuery.h程序代码](12.33/TextQuery.h)  
+[12.33 TextQuery.cpp程序代码](12.33/TextQuery.cpp)  
+[12.33 测试程序代码](12.33/main.cpp)  

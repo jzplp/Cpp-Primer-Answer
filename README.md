@@ -18,4 +18,6 @@ C++ Primer 第五版中文版 练习题答案代码（个人所做）
 * [第十章 练习题答案](Chapter-10/chapter-10-answer.md)  
 * [第十一章 练习题答案](Chapter-11/chapter-11-answer.md)  
 * [第十二章 练习题答案](Chapter-12/chapter-12-answer.md)  
+* [第十三章 练习题答案](Chapter-13/chapter-13-answer.md)  
+
 
