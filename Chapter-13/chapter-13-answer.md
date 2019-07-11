@@ -30,7 +30,7 @@
 拷贝一个StrBlobPtr时，拷贝了智能指针和size_t类型  
 
 * **练习13.8**  
-添加了拷贝复制运算符  
+添加了拷贝赋值运算符  
 [13.8 HasPtr类 程序代码](13.8.cpp)  
 
 * **练习13.9**  
@@ -43,6 +43,7 @@
 销毁StrBlobPtr对象：销毁一个weak_ptr对象和size_t对象。  
 
 * **练习13.11**  
+添加了析构函数  
 [13.11 HasPtr类 程序代码](13.11.cpp)  
 
 * **练习13.12**  
@@ -55,4 +56,47 @@
 [13.13程序代码](13.13.cpp)  
 
 * **练习13.14**  
+输出相同的序号
 
+* **练习13.15**  
+会改变上一题中的输出结果，但是并不是我们想要的a，b，c的序号
+
+* **练习13.16**  
+会改变输出结果，改成了我们想要的a，b，c的序号
+
+* **练习13.17**  
+[13.17 numbered类 13.14合成的拷贝构造函数程序代码](13.17/numbered_syn.cpp)  
+[13.17 numbered类 13.15自定义拷贝构造函数程序代码](13.17/numbered_copyCon.cpp)  
+[13.17 numbered类 13.16引用参数f函数程序代码](13.17/numbered_referFun.cpp)  
+
+* **练习13.18**  
+[13.18 Employee类 程序代码](13.18.cpp)  
+
+* **练习13.19**  
+我认为Employee类应该禁止拷贝。因为员工是唯一的，复制是没有意义的。
+[13.19 Employee类 程序代码](13.19.cpp)  
+
+* **练习13.20**  
+TextQuery参照书上的使用vector的，12章进行添加后的版本    
+TextQuery类  
+拷贝：拷贝一个shared_ptr和一个map  
+赋值：赋值一个shared_ptr和一个map  
+销毁：默认销毁一个shared_ptr和一个map  
+QueryResult类  
+拷贝：拷贝2个shared_ptr和一个string  
+赋值：赋值2个shared_ptr和一个string  
+销毁：默认销毁2个shared_ptr和一个string  
+
+* **练习13.21**  
+TextQuery参照书上的使用vector的，12章进行添加后的版本  
+TextQuery类和QueryResult类中的指针成员都是智能指针，依赖于合成的操作即可正常使用。因此不需要定义拷贝控制成员。  
+main.cpp仅用于本题测试  
+[13.21 TextQuery.h程序代码](13.21/TextQuery.h)  
+[13.21 TextQuery.cpp程序代码](13.21/TextQuery.cpp)  
+[13.21 测试程序代码](13.21/main.cpp)  
+
+* **练习13.22**  
+使用之前练习中的代码，即可让HasPtr类具有值行为  
+[13.11 HasPtr类 程序代码](13.11.cpp)  
+
+* **练习13.23**  
