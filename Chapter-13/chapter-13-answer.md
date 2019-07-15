@@ -170,3 +170,37 @@ Message类 书上的版本，添加了自定义的Folder类，添加了显示内
 因此效率低下，不如直接用拷贝赋值运算符。
 
 * **练习13.39**  
+StrVec类 书上的版本。  
+自己编写了reserve和resize函数，并修改了书上reallocate函数操作，委托reserve函数执行。  
+[13.39 StrVec.h 程序代码](13.39/StrVec.h)  
+[13.36 StrVec.cpp 程序代码](13.39/StrVec.cpp)  
+[13.39 测试程序代码](13.39/main.cpp)  
+
+* **练习13.40**  
+StrVec类 书上的版本。  
+自己编写了initializer_list的构造函数  
+[13.40 StrVec.h 程序代码](13.40/StrVec.h)  
+[13.40 StrVec.cpp 程序代码](13.40/StrVec.cpp)  
+[13.40 测试程序代码](13.40/main.cpp)  
+
+* **练习13.41**  
+如果使用前置递增运算符，每次添加时会隔开一个未构造的元素  
+
+* **练习13.42**  
+StrVec类 书上的，经过前面的题目改写后的版本。  
+TextQuery类 书上的，经过前面的题目改写后的版本。  
+TextQuery中vector用StrVec类代替  
+[13.42 TextQuery.h程序代码](13.42/TextQuery.h)  
+[13.42 TextQuery.cpp程序代码](13.42/TextQuery.cpp)  
+[13.42 StrVec.h 程序代码](13.42/StrVec.h)  
+[13.42 StrVec.cpp 程序代码](13.42/StrVec.cpp)  
+[13.42 测试程序代码](13.42/main.cpp)  
+
+* **练习13.43**  
+StrVec类 书上的，经过前面的题目改写后的版本。   
+用for_each和lambda改写了free成员函数  
+[13.43 StrVec.h 程序代码](13.43/StrVec.h)  
+[13.43 StrVec.cpp 程序代码](13.43/StrVec.cpp)  
+[13.43 测试程序代码](13.43/main.cpp)  
+
+* **练习13.44**  
