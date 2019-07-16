@@ -22,7 +22,6 @@ void StrVec::free()
 {
 	if(elements)
 	{
-		StrVec * th = this;
 		std::for_each(elements, first_free, [](std::string &s){ alloc.destroy(&s); } );
 		alloc.deallocate(elements, cap - elements);
 	}
