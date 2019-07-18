@@ -235,6 +235,34 @@ String类 自己定义 模仿书上的StrVec类
 [13.48 String.h 程序代码](13.48/String.h)  
 [13.48 String.cpp 程序代码](13.48/String.cpp)  
 [13.48 测试程序代码](13.48/main.cpp)  
+push_back了三次，运行结果为：  
+```
+String(const String & s)
+
+String(const String & s)
+String(const String & s)
+
+String(const String & s)
+String(const String & s)
+String(const String & s)
+```
 
 * **练习13.49**  
+StrVec类 书上的版本  
+增加了书上版本的移动构造函数和移动赋值运算符  
+[13.49 StrVec.h 程序代码](13.49/StrVec/StrVec.h)  
+[13.49 StrVec.cpp 程序代码](13.49/StrVec/StrVec.cpp)  
+[13.49 测试程序代码](13.49/StrVec/main.cpp)  
+String类 自己定义 模仿书上的StrVec类  
+增加了移动构造函数和移动赋值运算符  
+[13.49 String.h 程序代码](13.49/String/String.h)  
+[13.49 String.cpp 程序代码](13.49/String/String.cpp)  
+[13.49 测试程序代码](13.49/String/main.cpp)  
+Message类 书上的版本 Folder类自己定义的版本(书上无定义)    
+Message类和Folder类增加了移动构造函数和移动赋值运算符  
+[13.49 Message.h 程序代码](13.49/Message/Message.h)  
+[13.49 Message.cpp 程序代码](13.49/Message/Message.cpp)  
+[13.49 测试程序代码](13.49/Message/main.cpp)  
+
+* **练习13.50**  
 
