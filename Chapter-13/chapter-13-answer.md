@@ -254,15 +254,86 @@ StrVec类 书上的版本
 [13.49 StrVec.cpp 程序代码](13.49/StrVec/StrVec.cpp)  
 [13.49 测试程序代码](13.49/StrVec/main.cpp)  
 String类 自己定义 模仿书上的StrVec类  
-增加了移动构造函数和移动赋值运算符  
+增加了书上版本的移动构造函数和移动赋值运算符  
 [13.49 String.h 程序代码](13.49/String/String.h)  
 [13.49 String.cpp 程序代码](13.49/String/String.cpp)  
 [13.49 测试程序代码](13.49/String/main.cpp)  
 Message类 书上的版本 Folder类自己定义的版本(书上无定义)    
-Message类和Folder类增加了移动构造函数和移动赋值运算符  
+Message类和Folder类增加了书上版本的移动构造函数和移动赋值运算符  
 [13.49 Message.h 程序代码](13.49/Message/Message.h)  
 [13.49 Message.cpp 程序代码](13.49/Message/Message.cpp)  
 [13.49 测试程序代码](13.49/Message/main.cpp)  
 
 * **练习13.50**  
+String类 自己定义 模仿书上的StrVec类  
+只在移动构造函数和移动赋值运算符添加了输出语句  
+[13.50 String.h 程序代码](13.50/String.h)  
+[13.50 String.cpp 程序代码](13.50/String.cpp)  
+[13.50 测试程序代码](13.50/main.cpp)  
 
+* **练习13.51**  
+因为unique_ptr支持移动操作，因此我们可以对unique_ptr用移动构造函数和移动赋值运算符，从而实现clone函数中的操作  
+
+* **练习13.52**  
+```
+hp = hp2;
+调用rhs的拷贝构造函数 HasPtr(const HasPtr & hp) 
+hp2 被拷贝构造函数中的hp引用
+拷贝构造函数生成一个临时对象rhs，作为赋值运算符的参数
+调用赋值运算符 HasPtr & operator=(HasPtr rhs)
+然后最外层的hp，也就是this指向的对象和临时对象rhs进行swap，最后再返回*this
+然后被swap的临时对象rhs被调用析构函数后，自动销毁
+hp = std::move(hp2);
+调用rhs的移动构造函数 HasPtr(HasPtr && p) 
+hp2 被移动构造函数中的p引用，用来初始化了rhs
+然后hp2也就是p被置为可析构的状态
+移动构造函数生成一个临时对象rhs，作为赋值运算符的参数
+调用赋值运算符 HasPtr & operator=(HasPtr rhs)
+然后最外层的hp，也就是this指向的对象和临时对象rhs进行swap，最后再返回*this
+然后被swap的临时对象rhs被调用析构函数后，自动销毁
+```
+
+* **练习13.53**  
+因为赋值运算符中赋值并交换的版本依然需要新创建一个临时对象，最后这个对象还要被销毁。因此效率上不是最好的。  
+HasPtr类 具有类值行为的版本  
+增加了自己定义的移动构造函数和移动赋值运算符  
+[13.53 HasPtr类 程序代码](13.53/HasPtr.h)  
+[13.53 测试程序代码](13.53/main.cpp)  
+
+* **练习13.54**  
+会出现模糊重载的编译错误，错误信息如下:
+```
+[Error] ambiguous overload for 'operator=' (operand types are 'HasPtr' and 'HasPtr')
+```
+HasPtr类 具有类值行为的版本   
+同时具有复制运算符，拷贝赋值运算符，移动赋值运算符  
+本程序会发生编译错误  
+[13.54 HasPtr类 错误程序代码](13.54/HasPtr.h)  
+[13.54 测试程序代码](13.54/main.cpp)  
+
+* **练习13.55**  
+StrBlob类 增加了右值引用版本的push_back  
+[13.55 StrBlob.h程序代码](13.55/StrBlob/StrBlob.h)  
+[13.55 StrBlob.cpp程序代码](13.55/StrBlob/StrBlob.cpp)  
+[13.55 测试程序代码](13.55/StrBlob/main.cpp)  
+StrVec类 书上的版本（题目未要求）  
+增加了书上版本的右值引用的push_back    
+[13.55 StrVec.h 程序代码](13.55/StrVec/StrVec.h)  
+[13.55 StrVec.cpp 程序代码](13.55/StrVec/StrVec.cpp)  
+[13.55 测试程序代码](13.55/StrVec/main.cpp)  
+
+* **练习13.56**  
+先用this创建一个临时对象ret，然后再用这个临时对象调用sorted()，由于ret在此时是左值，因此会重复调用这个函数，造成无限递归  
+
+* **练习13.57**  
+先用this创建一个临时对象，这个临时对象是右值，可以调用右值的sorted函数，因此可以返回临时对象自身，用临时对象自身初始化一个Foo返回。
+
+* **练习13.58**  
+Foo类 书上正确的版本  
+[13.58 Foo类 程序代码](13.58/Foo_correct.cpp)  
+Foo类 书上13.56 sorted() const & 错误的版本  
+本程序会发生运行错误  
+[13.58 Foo类 13.56错误程序代码](13.58/Foo_13.56.cpp)  
+Foo类 书上13.57 sorted() const & 正确的版本  
+[13.58 Foo类 13.57程序代码](13.58/Foo_13.57.cpp)  
+我对前两题的答案正确  
