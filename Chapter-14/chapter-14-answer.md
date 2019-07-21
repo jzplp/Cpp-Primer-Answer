@@ -75,4 +75,60 @@ Tree类 自己的简单版本（始于7.40题）
 [14.12 测试程序代码](14.12/main.cpp)  
 
 * **练习14.13**  
+目前没有想到
 
+* **练习14.14**  
+1. 这样在操作上可行，是可以正常运行的
+2. +=和+在逻辑上是类似的运算符，具体的操作也是大部分相同的，如果利用+=来定义+，这样避免了重复定义操作。
+
+* **练习14.15**  
+不应该，因为树不应该含有加减乘除等操作  
+
+* **练习14.16**  
+Sales_data类 书上的版本（题目未要求）  
+增加了书上版本的重载相等性运算符  
+[14.16 Sales_data.h程序代码](14.16/Sales_data/Sales_data.h)  
+[14.16 Sales_data.cpp程序代码](14.16/Sales_data/Sales_data.cpp)  
+[14.16 仅本题测试程序代码](14.16/Sales_data/main.cpp)  
+StrBlob类 增加了重载相等性运算符  
+[14.16 StrBlob.h程序代码](14.16/StrBlob/StrBlob.h)  
+[14.16 StrBlob.cpp程序代码](14.16/StrBlob/StrBlob.cpp)  
+[14.16 测试程序代码](14.16/StrBlob/main.cpp)  
+StrVec类 书上的版本   
+增加了重载相等性运算符    
+[14.16 StrVec.h 程序代码](14.16/StrVec/StrVec.h)  
+[14.16 StrVec.cpp 程序代码](14.16/StrVec/StrVec.cpp)  
+[14.16 测试程序代码](14.16/StrVec/main.cpp)  
+String类 自己定义 模仿书上的StrVec类  
+增加了重载相等性运算符  
+[14.16 String.h 程序代码](14.16/String/String.h)  
+[14.16 String.cpp 程序代码](14.16/String/String.cpp)  
+[14.16 测试程序代码](14.16/String/main.cpp)  
+
+* **练习14.17**  
+Tree类 自己的简单版本（始于7.40题）  
+增加了重载的相等性运算符  
+[14.17 Tree.h程序代码](14.17/Tree.h)  
+[14.17 测试程序代码](14.17/main.cpp)  
+
+* **练习14.18**  
+StrBlob类  
+增加了重载关系运算符 改写了重载相等性运算符  
+[14.18 StrBlob.h程序代码](14.18/StrBlob/StrBlob.h)  
+[14.18 StrBlob.cpp程序代码](14.18/StrBlob/StrBlob.cpp)  
+[14.18 测试程序代码](14.18/StrBlob/main.cpp)  
+StrVec类 书上的版本   
+增加了重载关系运算符    
+[14.18 StrVec.h 程序代码](14.18/StrVec/StrVec.h)  
+[14.18 StrVec.cpp 程序代码](14.18/StrVec/StrVec.cpp)  
+[14.18 测试程序代码](14.18/StrVec/main.cpp)  
+String类 自己定义 模仿书上的StrVec类  
+增加了重载关系运算符    
+[14.18 String.h 程序代码](14.18/String/String.h)  
+[14.18 String.cpp 程序代码](14.18/String/String.cpp)  
+[14.18 测试程序代码](14.18/String/main.cpp)  
+
+* **练习14.19**  
+不应该，因为树不应该含有关系运算符   
+
+* **练习14.20**  
