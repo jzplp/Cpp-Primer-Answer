@@ -7,11 +7,4 @@ int main()
 	Sales_data b(std::cin);
 	std::cout << (a == b) << std::endl;
 	return 0;
-} 
-
-
-
-
-
-
-
+}

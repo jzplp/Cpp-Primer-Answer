@@ -132,3 +132,74 @@ String类 自己定义 模仿书上的StrVec类
 不应该，因为树不应该含有关系运算符   
 
 * **练习14.20**  
+Sales_data类 书上的版本  
+加法运算符已经在之前实现了  
+[14.16 Sales_data.h程序代码](14.16/Sales_data/Sales_data.h)  
+[14.16 Sales_data.cpp程序代码](14.16/Sales_data/Sales_data.cpp)  
+[14.9 测试程序代码](14.9/main.cpp)  
+
+* **练习14.21**  
+Sales_data类 本题代码后续不应采用  
+较差版本的加法运算符  
++运算符执行实际的加法操作，而+=调用+，这样会造成定义额外的局部变量，造成额外的资源消耗  
+[14.21 Sales_data.h程序代码](14.21/Sales_data.h)  
+[14.21 Sales_data.cpp程序代码](14.21/Sales_data.cpp)  
+[14.21 测试程序代码](14.21/main.cpp)  
+
+* **练习14.22**  
+Sales_data类 书上的版本  
+增加了参数为string的赋值运算符  
+[14.22 Sales_data.h程序代码](14.22/Sales_data.h)  
+[14.22 Sales_data.cpp程序代码](14.22/Sales_data.cpp)  
+[14.22 仅本题测试程序代码](14.22/main.cpp)  
+
+* **练习14.23**  
+StrVec类 书上的版本   
+增加了重载花括号列表赋值运算符    
+[14.23 StrVec.h 程序代码](14.23/StrVec.h)  
+[14.23 StrVec.cpp 程序代码](14.23/StrVec.cpp)  
+[14.23 测试程序代码](14.23/main.cpp)  
+
+* **练习14.24**  
+不应该。
+
+* **练习14.25**  
+不应定义其它赋值运算符。(我偷懒了)
+
+* **练习14.26**  
+StrBlob类  
+为StrBlob类，StrBlobPtr类，ConstStrBlobPtr类增加了下标运算符  
+[14.26 StrBlob.h程序代码](14.26/StrBlob/StrBlob.h)  
+[14.26 StrBlob.cpp程序代码](14.26/StrBlob/StrBlob.cpp)  
+[14.26 测试程序代码](14.26/StrBlob/main.cpp)  
+StrVec类 书上的版本   
+增加了下标运算符  
+[14.26 StrVec.h 程序代码](14.26/StrVec/StrVec.h)  
+[14.26 StrVec.cpp 程序代码](14.26/StrVec/StrVec.cpp)  
+[14.26 测试程序代码](14.26/StrVec/main.cpp)  
+String类 自己定义 模仿书上的StrVec类  
+增加了下标运算符  
+[14.26 String.h 程序代码](14.26/String/String.h)  
+[14.26 String.cpp 程序代码](14.26/String/String.cpp)  
+[14.26 测试程序代码](14.26/String/main.cpp)  
+
+* **练习14.27**  
+StrBlob类  
+为StrBlobPtr类，ConstStrBlobPtr类增加了递增递减运算符  
+[14.27 StrBlob.h程序代码](14.27/StrBlob.h)  
+[14.27 StrBlob.cpp程序代码](14.27/StrBlob.cpp)  
+[14.27 测试程序代码](14.27/main.cpp)  
+
+* **练习14.28**  
+StrBlob类  
+为StrBlobPtr类，ConstStrBlobPtr类增加了各类加减运算符  
+[14.28 StrBlob.h程序代码](14.28/StrBlob.h)  
+[14.28 StrBlob.cpp程序代码](14.28/StrBlob.cpp)  
+[14.28 测试程序代码](14.28/main.cpp)  
+
+* **练习14.29**  
+因为递增和递减运算符需要改变类对象，因此const类对象不能进行这种操作
+
+* **练习14.30**  
+
+
