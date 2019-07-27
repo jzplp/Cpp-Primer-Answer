@@ -254,14 +254,85 @@ biggies函数 用函数对象类代替lambda
 * **练习14.42**  
 ```
 (a)
-std::plus<int>()(i, 1024);
+std::count_if(v.begin(), v.end(), std::bind(std::greater<int>(), std::placeholders::_1, 1024));
 (b)
-std::equal_to<std::string>()(s, "pooh");
+std::find_not_if(v.begin(), v.end(), std::bind(std::equal_to<std::string>(), std::placeholders::_1, "pooh"));
 (c)
-std::multiplies<int>()(i, 2);
+std::tranform(v.begin(), v.end(), v.begin(), std::bind(std::multiplies<int>(),std::placeholders::_1, 2));
 ```
 
 * **练习14.43**  
 [14.43 程序代码](14.43.cpp)  
 
 * **练习14.44**  
+[14.44 简单的二元运算计算器 程序代码](14.44.cpp)  
+
+* **练习14.45**  
+Sales_data类 书上的版本  
+增加了转换为string和double的类型转换运算符  
+[14.45 Sales_data.h程序代码](14.45/Sales_data.h)  
+[14.45 Sales_data.cpp程序代码](14.45/Sales_data.cpp)  
+[14.45 仅本题测试程序代码](14.45/main.cpp)  
+
+* **练习14.46**  
+应该定义，但是必须声明成explicit的。如果是隐式的，可能会造成意外结果  
+
+* **练习14.47**  
+```
+operator const int();
+转换为const int类型，并且只能是非常量类对象才能使用
+operator int() const;
+转换为int类型，常量和非常量类对象都可以使用
+```
+
+* **练习14.48**  
+可以定义，但是必须是explicit的，否则可能造成意外结果  
+
+* **练习14.49**  
+Tree类 自己的简单版本（始于7.40题）  
+增加了转换为bool的类型转换运算符  
+[14.49 Tree.h程序代码](14.49/Tree.h)  
+[14.49 测试程序代码](14.49/main.cpp)  
+
+* **练习14.50**  
+```
+ex1: 初始化错误  
+1. LongDouble转换为double，double转换为int  
+2. LongDouble转换为float，float转换为int  
+ex2: 初始化正确  
+LongDouble到float
+```
+
+* **练习14.51**  
+```
+可能的类型转换序列：  
+1. double转换为LongDouble， 调用void calc(LongDouble)  
+2. double转换为int，调用void calc(int)  
+最佳可行函数为2，因为通过算术类型的转化比类类型转换的等级要高  
+```
+
+* **练习14.52**  
+```
+ld = si + ld;  
+1. SmallInt转换为int，LongDouble转换为double，double转换为int，调用int的加法  
+2. SmallInt转换为int，LongDouble转换为float，float转换为int，调用int的加法  
+3. SmallInt转换为int，int转换为double，LongDouble转换为double，调用double的加法  
+没有哪种方式明确的优于另外的几种，因此会发生错误  
+
+ld = si + ld;  
+1. SmallInt转换为int，int转换为double， 调用LongDoule operator+(LongDouble&, double)
+2. LongDouble转换为double，SmallInt转换为int，int转换为double，调用double的加法  
+3. LongDouble转换为double，double转换为int，SmallInt转换为int，调用int的加法  
+4. LongDouble转换为float，float转换为int，SmallInt转换为int，调用int的加法  
+5. 调用LongDouble LongDouble::operator(const SmallInt&)
+第5种不需要转换，优于其他几种
+```
+
+* **练习14.53**  
+```
+不合法，会产生二义性
+1. s1转换为int，int转换为double，调用double的加法  
+2. double转换为int，int转换为SmallInt，调用SmallInt SmallInt::operator(const SmallInt&, const SmallInt&)
+修改的方式有很多种，其中一种为：
+double d = int(s1) + 3.14;
+```
