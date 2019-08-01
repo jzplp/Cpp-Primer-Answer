@@ -198,3 +198,54 @@ Quote类 书上的版本
 不一致，因为智能指针进行了动态绑定  
 
 * **练习15.30**  
+Quote类 书上的版本  
+增加了Basket类   
+[15.30 Quote.h程序代码](15.30/Quote.h)  
+[15.30 Quote.cpp程序代码](15.30/Quote.cpp)  
+[15.30 测试程序代码](15.30/main.cpp)  
+
+* **练习15.31**  
+仅为示意
+(a) WordQuery(s1) WordQuery(s2) WordQuery(s3) OrQuery(s1, s2 & ~s3) NotQuery(s3) AndQuery(s2, ~s3)  
+(b) WordQuery(s1) WordQuery(s2) WordQuery(s3) OrQuery(s1, s2 & ~s3) NotQuery(s3) AndQuery(s2, ~s3)  
+(c) WordQuery(s1) WordQuery(s2) WordQuery(s3) WordQuery(s4) AndQuery(s1, s2) AndQuery(s3, s4) OrQuery(s1 & s2, s3 & s4)  
+
+* **练习15.32**  
+拷贝，移动，赋值，销毁一个shared_ptr的指针  
+
+* **练习15.33**  
+Query_base无数据成员，仅拷贝，移动，赋值，销毁类本身  
+
+* **练习15.34**  
+```
+(a)
+Query(const std::string &);
+Query_base();
+WordQuery(const std::string &);
+BinaryQuery(const Query &l, const Query &r, std::strin s);
+AndQuery(const Query &left, const Query &right);
+OrQuery(const Query &left, const Query &right);
+(b)
+Query::rep
+WordQuery::rep
+AndQuery::rep
+OrQuery::rep
+(c)
+Query::eval
+WordQuery::eval
+AndQuery::eval
+OrQuery::eval
+```
+
+* **练习15.35**  
+TextQuery类 书上的版本  
+Query和继承类 书上的版本  
+未定义的eval用了无意义的内容代替  
+[15.35 TextQuery.h程序代码](15.35/TextQuery.h)  
+[15.35 TextQuery.cpp程序代码](15.35/TextQuery.cpp)  
+[15.35 Query.h程序代码](15.35/Query.h)  
+[15.35 Query.cpp程序代码](15.35/Query.cpp)  
+[15.35 测试程序代码](15.35/main.cpp)  
+
+* **练习15.36**  
+
