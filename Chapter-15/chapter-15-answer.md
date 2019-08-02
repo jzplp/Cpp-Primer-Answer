@@ -228,8 +228,7 @@ OrQuery(const Query &left, const Query &right);
 (b)
 Query::rep
 WordQuery::rep
-AndQuery::rep
-OrQuery::rep
+BinaryQuery::rep
 (c)
 Query::eval
 WordQuery::eval
@@ -248,4 +247,60 @@ Query和继承类 书上的版本
 [15.35 测试程序代码](15.35/main.cpp)  
 
 * **练习15.36**  
+TextQuery类 书上的版本  
+Query和继承类 书上的版本  
+增加了检验用的是输出语句 代码仅本题使用  
+[15.36 TextQuery.h程序代码](15.36/TextQuery.h)  
+[15.36 TextQuery.cpp程序代码](15.36/TextQuery.cpp)  
+[15.36 Query.h程序代码](15.36/Query.h)  
+[15.36 Query.cpp程序代码](15.36/Query.cpp)  
+[15.36 测试程序代码](15.36/main.cpp)  
 
+* **练习15.37**  
+在生成派生Query_base的类对象的重载运算符函数中，需要取出Query类对象中的shared_ptr
+
+* **练习15.38**  
+```
+BinaryQuery a = Query("fiery") & Query("Brid");
+不合法，BinaryQuery是抽象基类，不能定义BinaryQuery类型的对象
+AndQuery b = Query("fiery") & Query("Brid");
+合法
+OrQuery b = Query("fiery") & Query("Brid");
+不合法, & 运算符的结果生成一个AndQuery类型对象，与OrQuery没有转换关系
+```
+
+* **练习15.39**  
+TextQuery类 书上的版本  
+Query和继承类 书上的版本  
+实现了书上版本的eval  
+[15.39 TextQuery.h程序代码](15.39/TextQuery.h)  
+[15.39 TextQuery.cpp程序代码](15.39/TextQuery.cpp)  
+[15.39 Query.h程序代码](15.39/Query.h)  
+[15.39 Query.cpp程序代码](15.39/Query.cpp)  
+[15.39 测试程序代码](15.39/main.cpp)  
+
+* **练习15.40**  
+如果rhs是空集，eval将只返回lhs的结果  
+如果lhs是空集，eval将只返回rhs的结果  
+如果都是空集，eval将返回无结果的QueryResult  
+
+* **练习15.41**  
+TextQuery类 书上的版本  
+Query和继承类 仅本题使用  
+使用内置指针不用shared_ptr重写了Query和继承类  
+包含自定义的clone函数和拷贝控制成员  
+[15.41 TextQuery.h程序代码](15.41/TextQuery.h)  
+[15.41 TextQuery.cpp程序代码](15.41/TextQuery.cpp)  
+[15.41 Query.h程序代码](15.41/Query.h)  
+[15.41 Query.cpp程序代码](15.41/Query.cpp)  
+[15.41 测试程序代码](15.41/main.cpp)  
+
+* **练习15.42**  
+TextQuery类 书上的修改版本 仅本题使用  
+Query和继承类 15.41版本 仅本题使用  
+TextQuery类中 使用'.'而不是换行符来识别一行  
+[15.42 TextQuery.h程序代码](15.42/TextQuery.h)  
+[15.42 TextQuery.cpp程序代码](15.42/TextQuery.cpp)  
+[15.42 Query.h程序代码](15.42/Query.h)  
+[15.42 Query.cpp程序代码](15.42/Query.cpp)  
+[15.42 测试程序代码](15.42/main.cpp)  

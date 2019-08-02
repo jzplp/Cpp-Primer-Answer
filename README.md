@@ -22,4 +22,4 @@ C++ Primer 第五版中文版 练习题答案代码（个人所做）
 * [第十三章 练习题答案](Chapter-13/chapter-13-answer.md)  
 * [第十四章 练习题答案](Chapter-14/chapter-14-answer.md)  
 * [第十五章 练习题答案](Chapter-15/chapter-15-answer.md)  
-
+* [第十六章 练习题答案](Chapter-16/chapter-16-answer.md)  
