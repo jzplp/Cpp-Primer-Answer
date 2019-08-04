@@ -9,5 +9,4 @@ int main()
 	Window_mgr::SIndex i = w.addScreen(s);
 	w.showScreen(std::cout, 1);
 	return 0;
-} 
-
+}
