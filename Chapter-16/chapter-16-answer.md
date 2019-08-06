@@ -110,3 +110,49 @@ template <typename T> void f4(T, T);
 [16.20 程序代码](16.20.cpp)  
 
 * **练习16.21**  
+DebugDelete类 书上的版本  
+[16.21 DebugDelete.h程序代码](16.21/DebugDelete.h)  
+[16.21 测试程序代码](16.21/main.cpp)  
+
+* **练习16.22**  
+TextQuery类 书上的版本  
+Query和继承类 书上的版本  
+DebugDelete类 书上的版本  
+为TextQuery中的shared_ptr替换删除器为DebugDelete 仅本题使用  
+[16.22 DebugDelete.h程序代码](16.22/DebugDelete.h)  
+[16.22 TextQuery.h程序代码](16.22/TextQuery.h)  
+[16.22 TextQuery.cpp程序代码](16.22/TextQuery.cpp)  
+[16.22 Query.h程序代码](16.22/Query.h)  
+[16.22 Query.cpp程序代码](16.22/Query.cpp)  
+[16.22 测试程序代码](16.22/main.cpp)  
+
+* **练习16.23**  
+在所有查询结束，程序结束时会执行调用运算符  
+
+* **练习16.24**  
+Blob类 书上的版本  
+实现了两个迭代器的构造函数  
+[16.24 Blob.h程序代码](16.24/Blob.h)  
+[16.24 测试程序代码](16.24/main.cpp)  
+
+* **练习16.25**  
+```
+extren template class vector<string>;
+声明模板类vector的string实例，定义在别处
+template class vector<Sales_data>;
+定义模板类vector的Sales_data实例
+```
+
+* **练习16.26**  
+不可以。因为vector有调用元素默认构造函数的成员，无法对这个成员实例化，所以无法对vector实例化  
+
+* **练习16.27**  
+(a) 未实例化，因为只是函数声明  
+(b) 未实例化，因为是引用  
+(c) 实例化了Stack<int>  
+(d) 未实例化，因为是指针  
+(e) 实例化了Stack<char>  
+(f) 实例化了Stack<string>  
+
+* **练习16.28**  
+
