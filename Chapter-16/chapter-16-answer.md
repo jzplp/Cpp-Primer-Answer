@@ -155,4 +155,30 @@ template class vector<Sales_data>;
 (f) 实例化了Stack<string>  
 
 * **练习16.28**  
+shared_ptr2类  
+模仿标准库的shared_ptr，自己实现  
+make_shared还不会实现  
+[16.28 shared_ptr2.h程序代码](16.28/shared_ptr2/shared_ptr2.h)  
+[16.28 DebugDelete.h程序代码](16.28/shared_ptr2/DebugDelete.h)  
+[16.28 测试程序代码](16.28/shared_ptr2/main.cpp)  
+unique_ptr2类  
+模仿标准库的unique_ptr，自己实现  
+[16.28 unique_ptr2.h程序代码](16.28/unique_ptr2/unique_ptr2.h)  
+[16.28 DebugDelete.h程序代码](16.28/unique_ptr2/DebugDelete.h)  
+[16.28 测试程序代码](16.28/unique_ptr2/main.cpp)  
+
+* **练习16.29**  
+Blob类 书上的版本 仅本题使用  
+用自己的shared_ptr2类替代shared_ptr  
+[16.29 Blob.h程序代码](16.29/Blob.h)  
+[16.29 shared_ptr2.h程序代码](16.29/shared_ptr2.h)  
+[16.29 测试程序代码](16.29/main.cpp)  
+
+* **练习16.30**  
+练习16.29中已经验证  
+
+* **练习16.31**  
+编译器可能会去掉DebugDelete类对象和相关函数，替换为对应的输出语句和释放操作  
+
+* **练习16.32**  
 
