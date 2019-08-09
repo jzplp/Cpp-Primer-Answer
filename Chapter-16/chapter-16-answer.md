@@ -231,4 +231,127 @@ auto sum(T1 a, T2 b) -> decltype(a + b)
 ```
 
 * **练习16.42**  
+```
+(a) T : int &  val : int &
+(b) T : const int & val : const int &
+(c) T : int val : int &&
+```
+
+* **练习16.43**  
+```
+T : int & val : int &
+```
+
+* **练习16.44**  
+```
+template<typename T> void g(T val);
+(a) T : int val : int 
+(b) T : int val : int
+(c) T : int val : int
+template<typename T> void g(const T & val);
+(a) T : int val : const int &
+(b) T : int val : const int &
+(c) T : int val : const int &
+```
+
+* **练习16.45**  
+如果用一个42调用g，则42是字面值常量，是右值，因此T为int，val为int && 类型。  
+如果用一个int类型变量调用g，因为变量是左值，将一个左值传递给函数的右值引用参数，编译器会推断模板T的类型为int & ，这样val的类型就是 int & &&，折叠后就是 int &
+
+* **练习16.46**  
+这段代码是要把元素从旧地址移动到新地址，虽然是左值，但是我们确定移动是安全的。  
+首先elem是string * 类型，*elem++是令elem指向下一个位置，同时返回当前位置对象的左值引用。 
+然后用std::move函数令左值类型转换为右值引用，再传参给alloc.construct函数，令其利用这个右值移动到新的内存中。
+
+* **练习16.47**  
+[16.47 程序代码](16.47.cpp)  
+
+* **练习16.48**  
+debug_rep模板重载函数 书上的版本  
+[16.48 程序代码](16.48.cpp)  
+
+* **练习16.49**  
+```
+g(42)
+候选函数:
+void g<int>(int);
+最后选择:
+void g<int>(int);
+g(p)
+候选函数:
+void g<int *>(int *);
+void g<int>(int *);
+最后选择:
+void g<int>(int *);
+g(ci)
+候选函数:
+void g<int>(int);
+最后选择:
+void g<int>(int);
+g(p2)
+候选函数:
+void g<const int *>(const int *);
+void g<const int>(const int *);
+最后选择:
+void g<const int>(const int *);
+f(42)
+候选函数:
+void f<int>(int);
+最后选择:
+void f<int>(int);
+f(p)
+候选函数:
+void f<int *>(int *);
+void f<int>(const int *);
+最后选择:
+void f<int *>(int *);
+f(ci)
+候选函数:
+void f<int>(int);
+最后选择:
+void f<int>(int);
+f(p2)
+候选函数:
+void f<const int *>(const int *);
+void f<int>(const int *);
+最后选择:
+void f<int>(const int *);
+```
+
+* **练习16.50**  
+[16.50 程序代码](16.50.cpp)  
+程序输出的结果是：
+```
+void g(T t)
+void g(T * t)
+void g(T t)
+void g(T * t)
+void f(T t)
+void f(T t)
+void f(T t)
+void f(const T * t)
+```
+结果相同  
+
+* **练习16.51**  
+猜测结果为：  
+```
+foo(i, s, 42, d);
+sizeof...(Args) 为 3
+sizeof...(rest) 为 3
+foo(i, 42, "hi");
+sizeof...(Args) 为 2
+sizeof...(rest) 为 2
+foo(d, s);
+sizeof...(Args) 为 1
+sizeof...(rest) 为 1
+foo("hi");
+sizeof...(Args) 为 0
+sizeof...(rest) 为 0
+```
+
+* **练习16.52**  
+[16.52 程序代码](16.52.cpp)  
+
+* **练习16.53**  
 
