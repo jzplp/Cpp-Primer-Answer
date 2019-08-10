@@ -43,6 +43,8 @@ C++ Primer 第五版中文版 练习题答案代码
     * 第十六章 模板与泛型编程  
     [第十六章 练习题答案](Chapter-16/chapter-16-answer.md)  
 * 第四部分 高级主题  
+    * 第十七章 标准库特殊设施  
+    [第十七章 练习题答案](Chapter-17/chapter-17-answer.md)  
 
 ## 编译环境
 * Windows 10 
