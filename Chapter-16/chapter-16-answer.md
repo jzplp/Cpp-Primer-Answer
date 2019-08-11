@@ -420,7 +420,7 @@ Sales_data类 书上的版本
 
 * **练习16.65**  
 debug_rep模板重载函数  
-另char * 和const char * 成为模板的特例化版本
+另char * 和const char * 成为模板的特例化版本  
 [16.65 程序代码](16.65.cpp)  
 
 * **练习16.66**  
