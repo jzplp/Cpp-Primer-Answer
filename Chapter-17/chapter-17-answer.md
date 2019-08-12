@@ -16,3 +16,38 @@ QueryResult类更改为tuple类型
 我认为QueryResult类的设计更好，因为类把对象封装了起来，还可以增加类方便，不用了解内部的实现。也适合进行改动。
 
 * **练习17.4**  
+Sales_data类 书上的版本  
+增加了书上版本的findBook和reportResult函数  
+测试代码仅本题使用  
+[17.4 Sales_data.h程序代码](17.4/Sales_data.h)  
+[17.4 Sales_data.cpp程序代码](17.4/Sales_data.cpp)  
+[17.4 测试程序代码](17.4/main.cpp)  
+
+* **练习17.5**  
+Sales_data类 仅本题使用  
+findBook和reportResult函数 用pair不用tuple  
+[17.5 Sales_data.h程序代码](17.5/Sales_data.h)  
+[17.5 Sales_data.cpp程序代码](17.5/Sales_data.cpp)  
+[17.5 测试程序代码](17.5/main.cpp)  
+
+* **练习17.6**  
+Sales_data类 仅本题使用  
+findBook和reportResult函数 不用pair不用tuple用类  
+[17.6 Sales_data.h程序代码](17.6/Sales_data.h)  
+[17.6 Sales_data.cpp程序代码](17.6/Sales_data.cpp)  
+[17.6 测试程序代码](17.6/main.cpp)  
+
+* **练习17.7**  
+我更倾向于类和tuple的，pair的太麻烦了  
+
+* **练习17.8**  
+最后计算的Sales_data中将不包含isbn
+
+* **练习17.9**  
+(a) 64位，其中第6位为1，其余为0  
+(b) 32位，其中低20位为1111 0110 1001 1011 0101  
+(c) 8位，具体表示由输入的字符串决定  
+
+* **练习17.10**  
+
+
