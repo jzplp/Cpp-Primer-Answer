@@ -160,3 +160,72 @@ Sales_data类 仅本题使用
 因为what函数一般在catch语句中使用，如果what函数引发了异常，那么前一个异常没有处理完毕，又来了新的异常，会很难处理  
 
 * **练习18.12**  
+TextQuery类 仅本题使用  
+Query和继承类 仅本题使用  
+增加了对应章的命名空间  
+[18.12 TextQuery.h程序代码](18.12/TextQuery.h)  
+[18.12 TextQuery.cpp程序代码](18.12/TextQuery.cpp)  
+[18.12 Query.h程序代码](18.12/Query.h)  
+[18.12 Query.cpp程序代码](18.12/Query.cpp)  
+[18.12 测试程序代码](18.12/main.cpp)  
+
+* **练习18.13**  
+希望使用单个文件范围内的静态变量时，可以使用未命名的命名空间  
+
+* **练习18.14**  
+```
+mathLib::MatrixLib::matrix mathLib::MatrixLib::matrix::operator*(const matrix &, const matrix &);
+```
+
+* **练习18.15**  
+using指示是让命名空间整个暴露在当前作用域中。  
+using声明仅仅让命名空间中的单个成员暴露在当前作用域中。  
+还有更多细节的差别  
+
+* **练习18.16**  
+位置1出现using声明：  
+出现命名冲突，ivar是一个当前作用域的变量，也是命名空间Exercise中的变量声明到当前作用域  
+位置2出现using声明：  
+出现命名冲突，dvar是一个当前作用域的变量，也是命名空间Exercise中的变量声明到当前作用域  
+位置1出现using指示：  
+manip函数中的++ivar出现调用的二义性，ivar是一个外层作用域的变量，也是命名空间Exercise中的变量指示到外层作用域  
+位置2出现using指示：  
+manip函数中的++ivar出现调用的二义性，ivar是一个外层作用域的变量，也是命名空间Exercise中的变量指示到外层作用域  
+
+* **练习18.17**  
+下面的代码都是测试错误的代码，仅本题使用  
+位置1出现using声明：  
+[18.17 using1测试程序代码](18.17/using1.cpp)  
+错误信息：
+```
+[Error] 'ivar' is already declared in this scope
+```
+位置2出现using声明：  
+[18.17 using2测试程序代码](18.17/using2.cpp)  
+错误信息：
+```
+In function 'void manip()':
+[Error] redeclaration of 'double dvar'
+[Note] previous declaration 'double Exercise::dvar'
+```
+位置1出现using指示：  
+[18.17 using3测试程序代码](18.17/using3.cpp)  
+错误信息：
+```
+In function 'void manip()':
+[Error] reference to 'ivar' is ambiguous
+[Note] candidates are: int ivar
+[Note] int Exercise::ivar
+```
+位置2出现using指示：  
+[18.17 using4测试程序代码](18.17/using4.cpp)  
+错误信息：
+```
+In function 'void manip()':
+[Error] reference to 'ivar' is ambiguous
+[Note] candidates are: int ivar
+[Note] int Exercise::ivar
+```
+与上一题的回答一致  
+
+* **练习18.18**  
