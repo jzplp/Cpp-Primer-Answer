@@ -235,3 +235,65 @@ In function 'void manip()':
 直接使用标准库的版本  
 
 * **练习18.20**  
+```
+匹配的函数为：
+void compute(int);
+可行函数和对应的转换：
+void primerLib::compute(const void *);
+0 转换为 nullptr
+void compute(int);
+类型符合
+void compute(double, double = 3.14);
+int 转换为 double
+void compute(char *, char * = 0);
+0 转换为 nullptr
+
+如果将using声明放到computer的调用点之前，那么候选函数只有：
+void primerLib::compute(const void *);
+0 转换为 nullptr
+```
+
+* **练习18.21**  
+```
+(a) CADVehicle类public继承CAD类，private继承Vehicle类  
+(b) 错误，重复继承同一个类  
+(c) iostream类public继承istream类，public继承ostream类  
+```
+
+* **练习18.22**  
+按照执行完成的顺序：
+```
+A-B-C-X-Y-Z-MI
+```
+
+* **练习18.23**  
+(a) 允许  
+(b) 允许  
+(c) 允许  
+(d) 允许  
+
+* **练习18.24**  
+```
+pb->print();
+正确，调用Panda::print()
+pb->cuddle();
+错误
+pb->highlight();
+错误
+delete pb;
+正确，调用Panda::~Panda()
+```
+
+* **练习18.25**  
+```
+(a) Base1::print()
+(b) D1::print()
+(c) D2::print()
+(d) MI::~MI()
+(e) MI::~MI()
+(f) MI::~MI()
+```
+
+* **练习18.26**  
+
+
