@@ -286,14 +286,80 @@ delete pb;
 
 * **练习18.25**  
 ```
-(a) Base1::print()
-(b) D1::print()
-(c) D2::print()
+(a) MI::print()
+(b) MI::print()
+(c) MI::print()
 (d) MI::~MI()
 (e) MI::~MI()
 (f) MI::~MI()
 ```
 
 * **练习18.26**  
+```
+因为在MI的作用域中只找到void print(std::vector<double>)函数，因此参数类型不匹配。
+MI中增加函数
+void print(int i) const
+{
+    Base1::print(i);
+}
+```
 
+* **练习18.27**  
+```
+不看成员函数
+(a) 
+函数作用域：
+int dval
+double cval
+MI类作用域：
+int * ival
+std::vector<double> dvec
+Derived类作用域：
+string sval
+Base1类作用域：
+无
+Base2类作用域：
+double fval
+剩下的名字应该都是隐藏不可见的  
+(b)
+不存在
+(c)
+dval = Base1::dval + Derived::dval;
+(d)
+假设MI::dvec的长度至少为1
+Base2::fval = MI::dvec[MI::dvec.size() - 1];
+(e)
+Devired::sval = Base1::cval + Devired::sval; 
+```
+
+* **练习18.28**  
+```
+无需前缀限定符的：
+Devired2::ival
+void Devired1::bar()
+需要前缀限定符的：
+Base::ival
+void Base::bar(int)
+void Derived1::foo(char)
+Derived1::cval
+void Derived2::foo(int)
+Derived2::cval
+```
+
+* **练习18.29**  
+(a) 构造函数执行次序,按照结束的时间排序：  
+Class, Base, D1, D2, MI, Class, Final  
+析构函数执行次序,按照结束的时间排序：  
+Final, MI, D1 D2 Base Class, Class
+(b) 1个Base部分，2个Class部分  
+(c) 
+```
+(a) 错误
+(b) 正确  
+(c) 正确  
+(d) 正确  
+```
+
+* **练习18.30**  
+[18.30 程序代码](18.30.cpp)  
 

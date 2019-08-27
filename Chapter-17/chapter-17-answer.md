@@ -92,7 +92,7 @@ std::bitset<100> b1;
 * **练习17.21**  
 电话号码记录程序  
 增加了regex识别电话号码  
-[17.21 PersonInfo.h程序代码](17.21/PersonInfo.h)  ‘ 下    
+[17.21 PersonInfo.h程序代码](17.21/PersonInfo.h)  
 [17.21 测试程序代码](17.21/main.cpp)  
 
 * **练习17.22**  
