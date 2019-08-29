@@ -111,4 +111,52 @@ using getSome2 = char (Screen::*)(Screen::pos, Screen::pos) const;
 ```
 
 * **练习19.18**  
+[19.18程序代码](19.18.cpp)  
 
+* **练习19.19**  
+Sales_data类 仅本题使用  
+查找平均价格高于某值的第一个Sales_data  
+更改了avg_price为public成员函数  
+[19.19 Sales_data.h程序代码](19.19/Sales_data.h)  
+[19.19 Sales_data.cpp程序代码](19.19/Sales_data.cpp)  
+[19.19 测试程序代码](19.19/main.cpp)  
+
+* **练习19.20**  
+TextQuery类 仅本题使用  
+Query和继承类 仅本题使用  
+另QueryResult类为TextQuery类的嵌套类  
+[19.20 TextQuery.h程序代码](19.20/TextQuery.h)  
+[19.20 TextQuery.cpp程序代码](19.20/TextQuery.cpp)  
+[19.20 Query.h程序代码](19.20/Query.h)  
+[19.20 Query.cpp程序代码](19.20/Query.cpp)  
+[19.20 测试程序代码](19.20/main.cpp)  
+
+* **练习19.21**  
+Token类 书上的版本  
+string的析构函数需要改成~basic_string()  
+[19.21程序代码](19.21.cpp)  
+
+* **练习19.22**  
+Sales_data类 书上的版本  
+Token类 书上的版本  
+Token类中增加了Sales_data类  
+[19.22 Sales_data.h程序代码](19.22/Sales_data.h)  
+[19.22 Sales_data.cpp程序代码](19.22/Sales_data.cpp)  
+[19.22 Token类测试程序代码](19.22/main.cpp)  
+
+* **练习19.23**  
+Sales_data类 书上的版本  
+Token类 书上的版本  
+Token类中增加移动构造函数和移动赋值运算符    
+[19.23 Sales_data.h程序代码](19.23/Sales_data.h)  
+[19.23 Sales_data.cpp程序代码](19.23/Sales_data.cpp)  
+[19.23 Token类测试程序代码](19.23/main.cpp)  
+
+* **练习19.24**  
+会调用拷贝赋值运算符，如果类中是string或者Sales_data成员，则会调用对应类的拷贝赋值运算符，它们会确保成员不会被析构。  
+如果是char，int等成员，则被直接重复赋值为自己。  
+
+* **练习19.25**  
+练习19.23中Token类已经编写。  
+
+* **练习19.26**  
